@@ -16,6 +16,8 @@ body{
 	background: url('https://feedammo.github.io/RishabhYadav/assets/computer-macbook-cup-coffee.jpg');
 	background-size: cover;
 	background-position:center;
+  width: 100%;
+  /*background-color: lightblue;*/
 }
 
 hr {
@@ -50,11 +52,6 @@ h2{
 h3{
   line-height: 0.01;
   text-align: center;
-}
-body {
-  /*background: url('https://feedammo.github.io/RishabhYadav/assets/background.jpg');*/
-width: 100%;
-  background-color: lightblue;
 }
 
 
