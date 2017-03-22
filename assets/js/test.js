@@ -8,6 +8,7 @@ btnSubmit.addEventListener("click", function(){
 	var pBirthChoice  = [];
 	var pFoodChoice = [];
 	var concessionOpt = [];
+	// var srCitizen = [];
 	var code = "javascript: ";
 
 	for (var i = 0; i<6; i++) {
@@ -16,6 +17,7 @@ btnSubmit.addEventListener("click", function(){
 		pGender[i] = document.getElementById("psgnGender:"+i);
 		pBirthChoice[i] = document.getElementById("berthChoice:"+i);
 		pFoodChoice[i] = document.getElementById("foodChoice:"+i);
+		concessionOpt[i] = document.getElementById("concessionOpt:"+ i );
 
 		if(psgn[i].value!==""){
 			code+="document.querySelectorAll('.psgn-name')["+i+"].setAttribute('value',"+"'"+ psgn[i].value+"'"+");";
@@ -35,9 +37,16 @@ btnSubmit.addEventListener("click", function(){
 			code+="document.querySelectorAll('.psgn-berth-choice')["+i+"].value = "+"'"+ pBirthChoice[i].value+"'"+";";
 		}
 
+
 		if(pFoodChoice[i].value!==" "&&psgn[i].value!==""){
 
 			code+="try { document.querySelectorAll('.psgn-foodChoice')["+i+"].value = "+"'"+pFoodChoice[i].value+"'"+";} catch(e){console.log('This form does not have food choice option.'+e);} ";
+		}
+
+
+		if(concessionOpt[i].checked === true){
+
+			code+=" document.querySelectorAll('.psgn-concopt')["+i+"].checked = 1;";
 		}
 
 
@@ -104,7 +113,11 @@ btnSubmit.addEventListener("click", function(){
 		code +="document.getElementById('addPassengerForm:onlyConfirmBerths').checked = 1 ; ";
 	}
 
-	console.log(code);
+	//console.log(code);
+	// console.log(code);
+	alert('Bookmark the "Amaze Me" Button');
+
+	document.getElementById('detailBM').setAttribute('href', code);
 });
 
 

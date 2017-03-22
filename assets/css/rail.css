@@ -1,6 +1,14 @@
 
 
 
+
+
+
+input:focus{
+	 outline: none !important;
+    border:1px solid red;
+    box-shadow: 0 0 10px #719ECE;
+}
 h2{
 	text-align: center;
 }
@@ -15,7 +23,8 @@ table:nth-of-type(1),table:nth-of-type(2){
 
 }
 table:nth-of-type(3){
-	padding: 20px;
+
+	/*margin-left: 20px;padding: 20px;*/
 }
 
 body {
@@ -35,13 +44,12 @@ width: 100%;
 
 
 #ph-confirm {
+	
 	text-align: center;
 }
 
 
-/*input,select {
-	border-radius: 5px; 
-}*/
+
 table {
 	/*border: 1px solid black;*/
 
@@ -60,4 +68,14 @@ nav {
  
 input,select {
 	border-radius: 2px;
+	margin-bottom: 5px;
 }
+#conditions{
+	width: 500px;
+}
+.psgn-details input[type='checkbox']{
+	 float: left;
+    margin: 0 auto;
+    width: 100%;
+}
+	

@@ -1,65 +1,163 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="assets/js/lib/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+	<script type="text/javascript" src="assets/js/lib/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/rail.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://use.fontawesome.com/0d0f8c0f27.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>easyIrctc</title>
+	<style type="text/css">
+
+		#output{
+			width:280px;
+			font-size: 1.2em;
+			margin: 0 auto;
+			/*	margin-right: 200px;*/
+			/*border: 1px solid black;*/
+		}
+
+		#bookmark{
+
+			margin-left: 18%;
+			text-align: center;
+			text-decoration: none;
+			background: purple;
+			border-radius: 10px;
+			font-size: 2em;
+
+		}
+		#bookmark a{
+			text-align: center;
+			text-decoration: none;
+			color: white;
+		}
+		table {
+		    border-collapse: separate;
+  			border-spacing: 5px;
+
+		}
+		input,select {
+			border-radius: 2px;
+			margin-bottom: 5px;
+		}
+
+	</style>
 </head>
 <body>
-<div >
-<table>
+	<br>
+	<br>
+	<br>
+	<div >
+<!-- <table>
 <th>Irctc Auto Login</th>
 <tr><td>Username</td><td><input type="text" name="" id="loginUserId"></td></tr>
 <tr><td>Password</td><td><input type="password" name="j_password" ></td></tr>
 <tr><td></td><td><button id="submit">Submit</button><button id="reset">Reset</button></td></tr>
 </div>
 
-</table>
-<!-- 
-<a id="loginBM" href="easyIrctc"><span id="lolx">Amaze Me!</span></a>
- --><br>
+</table> 
+ -->
+
+<nav class="navbar navbar-default  navbar-fixed-top">
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://rishabhyadav.com">Rishabh Yadav</a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <ul class="nav navbar-nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+   
+    </a>
+    <!-- <ul class="dropdown-menu"> -->
+  
+     <li >
+     <a href="irctc.html">&nbsp;<i class="fa fa-subway " aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Railways</a>
+     </li>
+      <li><a href="card.html"><i class="fa fa-credit-card-alt " aria-hidden="true"></i>&nbsp;&nbsp; Card Autofill</a></li>
+  
+  </li>
+
+      </ul>
+      </div>
+</nav>
+
+
+
+
+
+<br>
 <div id="container">
 	<h3>Card Detail Autofill</h3>
-<table><tr>
-	<td>Name on Card</td><td><input type="text" id="card_name_id"></td></tr>
+	<table><tr>
+		<td>Name on Card </td><td><input type="text" id="card_name_id"></td></tr>
+		<tr>
+			<td>Card Number</td><td><input type="text" id="card_no_id" value=""></td>
+		</tr><tr><td>MM/YY</td><td><select name="card_expiry_mon" id="card_expiry_mon_id">
+		<option selected="selected" value=" ">MM</option>
+		<option value="01">01 (Jan)</option>
+		<option value="02">02 (Feb)</option>
+		<option value="03">03 (Mar)</option>
+		<option value="04">04 (Apr)</option>
+		<option value="05">05 (May)</option>
+		<option value="06">06 (Jun)</option>
+		<option value="07">07 (Jul)</option>
+		<option value="08">08 (Aug)</option>
+		<option value="09">09 (Sep)</option>
+		<option value="10">10 (Oct)</option>
+		<option value="11">11 (Nov)</option>
+		<option value="12">12 (Dec)</option>
+	</select>
+
+	&nbsp;<input type="text" name="card_expiry_year" maxlength="4" size="4" id="card_expiry_year_id" autocomplete="off" ></td></tr>
 	<tr>
-	<td>Card Number</td><td><input type="text" id="card_no_id" value=""></td>
-	</tr><tr><td>MM/YY</td><td><select name="card_expiry_mon" id="card_expiry_mon_id">
-							  <option selected="selected" value=" ">MM</option>
-			                  <option value="01">01 (Jan)</option>
-			                  <option value="02">02 (Feb)</option>
-			                  <option value="03">03 (Mar)</option>
-			                  <option value="04">04 (Apr)</option>
-			                  <option value="05">05 (May)</option>
-			                  <option value="06">06 (Jun)</option>
-			                  <option value="07">07 (Jul)</option>
-			                  <option value="08">08 (Aug)</option>
-			                  <option value="09">09 (Sep)</option>
-			                  <option value="10">10 (Oct)</option>
-			                  <option value="11">11 (Nov)</option>
-			                  <option value="12">12 (Dec)</option>
-							</select><input type="text" name="card_expiry_year" maxlength="4" size="4" id="card_expiry_year_id" autocomplete="off" ></td></tr>
-<tr>
-	<td>CVV</td><td><input type="text" id="cvv_no_id" maxlength="3" size="3"></td>
+		<td>CVV</td><td><input type="password" id="cvv_no_id" maxlength="3" size="3"></td>
 	</tr>
 
-<tr><td></td><td><button id="card_submit">Submit</button></td></tr>
+	<tr><td></td><td><button id="card_submit">Submit</button></td></tr>
 
 </table>
 
 
+<script>
 
+	$('#card_submit').click(function(){
 
+		if($('#card_name_id').val()!== "" && $('#card_no_id').val()!==""){
 
-<a id="loginBM" href="easyIrctc"><span id="lolx">Amaze Me!</span></a>
+			$('#output').html('<button id="bookmark"><a id="loginBM" href="">Amaze Me!</a></button>');
+			alert("Bookmark the Amaze Me Link!");
+		} else {
+			$('#output').html("<b>You have left some fields empty!</b>")
+			$('#output').css({'color' :'red'});
+			$('#card_name_id').css({'border-color': 'red'});
+			$('#card_no_id').css({'border-color': 'red'});
+		}
 
+	});
 
-
-
-
-
-
-
-
+</script>
+<div id="output">
+</div>
 </body>
-<script type="text/javascript" src="assets/js/logic.js"></script>
+<script type="text/javascript" src="/assets/js/logic.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"> </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </html>

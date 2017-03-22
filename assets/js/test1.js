@@ -8,7 +8,6 @@ btnSubmit.addEventListener("click", function(){
 	var pBirthChoice  = [];
 	var pFoodChoice = [];
 	var concessionOpt = [];
-
 	var code = "javascript: ";
 
 	for (var i = 0; i<6; i++) {
@@ -38,7 +37,7 @@ btnSubmit.addEventListener("click", function(){
 
 		if(pFoodChoice[i].value!==" "&&psgn[i].value!==""){
 
-			code+="document.querySelectorAll('.psgn-foodChoice')["+i+"].value = "+"'"+pFoodChoice[i].value+"'"+";";
+			code+="try { document.querySelectorAll('.psgn-foodChoice')["+i+"].value = "+"'"+pFoodChoice[i].value+"'"+";} catch(e){console.log('This form does not have food choice option.'+e);} ";
 		}
 
 
@@ -49,7 +48,6 @@ btnSubmit.addEventListener("click", function(){
 	var infant = [];
 	var infantAge = [];
 	var infantGender = [];
-
 
 	for(var i=0; i<2; i++){
 
@@ -79,8 +77,6 @@ btnSubmit.addEventListener("click", function(){
 
 	}
 
-
-
 	var bookCond = [];
 
 	for(var i = 0 ; i<4; i++){
@@ -96,8 +92,8 @@ btnSubmit.addEventListener("click", function(){
 
 	var autoUpgrade = document.getElementById('addPassengerForm:autoUpgrade');
 	if(autoUpgrade.checked === true){
-	code+="document.getElementById('addPassengerForm:autoUpgrade').checked = 1;";
-}
+		code+="document.getElementById('addPassengerForm:autoUpgrade').checked = 1;";
+	}
 	var vikalp = document.getElementById('addPassengerForm:atasOption');
 	if(vikalp.checked === true){
 		code+="document.getElementById('addPassengerForm:atasOption').checked = 1;";
@@ -108,28 +104,10 @@ btnSubmit.addEventListener("click", function(){
 		code +="document.getElementById('addPassengerForm:onlyConfirmBerths').checked = 1 ; ";
 	}
 
-
-
-
-
-
-
+	console.log(code);
+	alert('Bookmark the "Amaze Me" Button');
 
 	document.getElementById('detailBM').setAttribute('href', code);
-
-	console.log(code);
 });
 
-var btnReset = document.getElementById('btn-reset');
-btnReset.addEventListener("click", function(){
 
-document.getElementById('psgn:details').reset();
-
-});
-
-//*********Search html for a specific class, If exists then pass the value,*****************
-
-
-
-
-//***********Logic for Senior Citizen consession, prompting automatic selection of concession opt****************************

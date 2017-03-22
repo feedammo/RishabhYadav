@@ -3,47 +3,30 @@ html{
 			height: 100%;
 		}
 
-/*
-.navbar {
-	position: absolute; 
-}
-.navbar-nav {
-	position: relative;
-
-}*/
 nav {
     margin: 0 0 0 0;
     font-family: Arial;
     font-size: 100%;
     width: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
  }
 
 
 body{
-	background: url('https://feedammo.github.io/RishabhYadav/assets/computer-macbook-cup-coffee.jpg');
+	background: url(/assets/computer-macbook-cup-coffee.jpg);
 	background-size: cover;
-			background-position:center;
-/*	margin :0%;
-	height: 100% ;
-height: 100% ;
-background: #F0C27B; /* fallback for old browsers */
-/*background: -webkit-linear-gradient(to left, #F0C27B , #4B1248);  Chrome 10-25, Safari 5.1-6 
-background: linear-gradient(to left, #F0C27B , #4B1248); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-position:center;
 }
+
 hr {
-
-
- border: 0;
+	border: 0;
     height: 1px;
     width: 300px;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 
-
-
-}
+	}
 
 #content{
 	padding-top: 10%;
@@ -51,15 +34,13 @@ hr {
 	margin: 0 auto;
 	max-width: 800px;
 	height: 100% ;
- background: rgba(255, 255, 255, 0); 
-
-	text-align: center;
+    background: rgba(255, 255, 255, 0); 
+    text-align: center;
 }
 h1 {
 
 	font-size: 5em;
 	text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
-	
 	padding-top: 120px;
 
 }
@@ -70,11 +51,97 @@ h1 {
 text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
 
 
-
 }
 
 #railform{
 
 
 	margin: 0 auto;
+}
+	.popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 280px;
+  left: 50%;
+  margin-left: -150px;
+  height: 180px;
+  top: 50%;
+  margin-top: -100px;
+  background: #FFF;
+  z-index: 20;
+}
+
+#popup2:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -2;
+}
+
+#popup2:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  z-index: -1;
+}
+#amaze{
+		margin-top: 20%;
+	/*position: relative;*/
+	width: 260px;
+			border-radius: 10px;
+			font-size: 2em;
+			background: purple;
+
+	/*top: 50%;*/
+	/**/
+	 /*transform: translateY(-50%);*/
+}
+ #amaze a{
+ 	text-decoration: none;
+	/*text-align: center;*/
+	/*align-items: center;*/
+	/*width:200px;*/
+	color:white;
+
+}
+
+#amaze:hover{
+	background:green;
+}
+
+
+#closePop{
+	align-items: center;
+	border-radius: 10px;
+	background-color: black;
+	color:orange;
+	margin-left: 40%; 
+}
+#closePop:hover{
+	background:white;
+	color:black;
+}
+
+.navbar-brand, h1 {
+	font-family: 'Playball', cursive;
+}
+
+.dropdown-menu>.active>a {
+    color: black;
+    text-decoration: none;
+    background-color: #bdbfc1;
+    outline: 0;
+}
+.dropdown-menu>.active>a:hover {
+	color: black;
+	background-color: #c8cfd6;
 }
