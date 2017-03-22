@@ -1,4 +1,4 @@
-alert("Script Connected");
+// alert("Script Connected");
 var btnSubmit = document.getElementById("btn-submit");
 
 btnSubmit.addEventListener("click", function(){	
