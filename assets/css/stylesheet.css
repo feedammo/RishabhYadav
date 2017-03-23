@@ -47,10 +47,12 @@ h1 {
 
 }
 h2{
+  text-shadow: 2px 2px 1px #000000;
   text-align: center;
 }
 h3{
-  line-height: 0.01;
+text-shadow: 2px 2px 1px #000000;
+  line-height: 0.4em;
   text-align: center;
 }
 
