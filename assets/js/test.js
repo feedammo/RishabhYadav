@@ -1,4 +1,4 @@
- alert("Script Connected");
+ // alert("Script Connected");
 
 
 var closeInfo = document.querySelector('#closeInfo');
