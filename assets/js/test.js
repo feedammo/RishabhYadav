@@ -1,4 +1,13 @@
-// alert("Script Connected");
+ alert("Script Connected");
+
+
+var closeInfo = document.getElementById('closeInfo');
+
+closeInfo.addEventListener("click", function(){
+document.getElementById('ac-wrapper').style.display="none";
+});
+
+
 
 var btnReset = document.getElementById("btn-reset");
 btnReset.addEventListener("click", function(){
