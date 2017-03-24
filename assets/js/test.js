@@ -1,4 +1,14 @@
 // alert("Script Connected");
+
+var btnReset = document.getElementById("btn-reset");
+btnReset.addEventListener("click", function(){
+	var input = document.querySelectorAll('input');
+	input.forEach(function(e){ e.value = "";});
+	var select = document.querySelectorAll('select');
+	select.forEach(function(e){ e.value = "Select";});
+	alert("All Fields Cleared!");
+});
+
 var btnSubmit = document.getElementById("btn-submit");
 
 btnSubmit.addEventListener("click", function(){	
