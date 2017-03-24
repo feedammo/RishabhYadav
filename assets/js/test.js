@@ -1,7 +1,7 @@
  alert("Script Connected");
 
 
-var closeInfo = document.getElementById('closeInfo');
+var closeInfo = document.querySelector('#closeInfo');
 
 closeInfo.addEventListener("click", function(){
 document.getElementById('ac-wrapper').style.display="none";
