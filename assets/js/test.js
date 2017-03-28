@@ -1,13 +1,9 @@
- // alert("Script Connected");
-
 
 var closeInfo = document.querySelector('#closeInfo');
 
 closeInfo.addEventListener("click", function(){
 document.getElementById('ac-wrapper').style.display="none";
 });
-
-
 
 var btnReset = document.getElementById("btn-reset");
 btnReset.addEventListener("click", function(){
@@ -132,8 +128,12 @@ btnSubmit.addEventListener("click", function(){
 		code +="document.getElementById('addPassengerForm:onlyConfirmBerths').checked = 1 ; ";
 	}
 
-	//console.log(code);
 	// console.log(code);
+	
+	//*******************************Experimental******************************************//
+	code +="try{document.getElementById('j_captcha').focus();document.getElementById('j_captcha').select();} catch(e){console.log('This form does not have text captcha. '+e)}";
+	//*******************************Experimental******************************************//
+
 	alert('Bookmark the "Amaze Me" Button');
 
 	document.getElementById('detailBM').setAttribute('href', code);
